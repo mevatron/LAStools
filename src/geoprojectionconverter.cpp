@@ -2388,7 +2388,7 @@ bool GeoProjectionConverter::get_ogc_wkt_from_projection(int& len, char** ogc_wk
       // if not geographic we have a projection
       if ((projection->type != GEO_PROJECTION_LAT_LONG) && (projection->type != GEO_PROJECTION_LONG_LAT))
       {
-        int len = strlen(projection->name);
+        size_t len = strlen(projection->name);
         char* epsg_name = 0;
         if (len == 0)
         {
